@@ -1,14 +1,21 @@
 <template>
   <div>
-
+    <NavBarComponent />
+    <MainComponent />
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-import { store } from './store'
+import { store } from './store';
+import NavBarComponent from './components/NavBarComponent.vue';
+import MainComponent from './components/MainComponent.vue'
   export default {
     name: 'App',
+    components: {
+      NavBarComponent,
+      MainComponent,
+    },
     data() {
       return {
         store
