@@ -9,10 +9,9 @@ export const store = reactive({
     options:{
         params:{
             api_key: 'cff4a1166def8a6357ad9e59123efd6c',
-            query: '',
+            query: 'a',
         }
     },
     moviesList: [],
-    tvSeriesList: [],
-    imageUri: 'https://image.tmdb.org/t/p/w342'
+    tvSeriesList: []
 })
