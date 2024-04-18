@@ -1,13 +1,13 @@
 <template>
-  <div>
+    <div>
 
-  </div>
+    </div>
 </template>
 
 <script>
-  export default {
-    name: 'CardComponent',
-  }
+    export default {
+        name: 'CardList',
+    }
 </script>
 
 <style lang="scss" scoped>

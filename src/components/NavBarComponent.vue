@@ -4,49 +4,16 @@
             <img src="/img/netflixVector__3_.svg" alt="Logo Netflix">
         </div>
         <div>
-            <input type="text" v-model="searchTerm" placeholder="Cerca film...">
-            <button @click="searchMovies">Search</button>
+            <input type="text"placeholder="Cerca film...">
+            <button>Search</button>
         </div>
     </nav>
-    <main>
-        <ul class="d-flex list-unstyled justify-content-center flex-wrap " v-if="moviesList.length > 0">
-            <li v-for="movie in moviesList" :key="movie.id">
-                <card-component :movie="movie" />
-            </li>
-        </ul>
-        <p v-else>Nessun film trovato.</p>
-    </main>
 </template>
 
 <script>
-import axios from 'axios';
-import { store } from '../store';
-import CardComponent from './CardComponent.vue'; 
-
-export default {
-    name: 'NavBarComponent',
-    components: {
-        CardComponent,
-    },
-    data() {
-        return {
-            searchTerm: '',
-            moviesList: [],
-        };
-    },
-    methods: {
-        searchMovies() {
-            const searchUrl = `${store.apiUrl}${store.endPoint.movie}?api_key=${store.options.params.api_key}&query=${this.searchTerm}`;
-            axios.get(searchUrl)
-                .then(response => {
-                    this.moviesList = response.data.results;
-                })
-                .catch(error => {
-                    console.error('Errore durante la ricerca:', error);
-                });
-        },
-    },
-};
+  export default {
+    
+}
 </script>
 
 <style lang="scss" scoped>

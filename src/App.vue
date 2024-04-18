@@ -23,13 +23,15 @@ import NavBarComponent from './components/NavBarComponent.vue';
     },
     methods: {
       getMovies() {
-        axios.get(this.store.apiUrl+this.store.endPoint.movie, this.store.options).then((res)=> {
-          console.log(res.data.results)
+        axios.get(this.store.apiUrl+this.store.endPoint.movies, this.store.options).then((res)=> {
+          console.log(res.data.results);
+          this.store.movies = res.data.results;
         })
       },
       getTvSeries() {
         axios.get(this.store.apiUrl+this.store.endPoint.series, this.store.options).then((res)=> {
-          console.log(res.data.results)
+          console.log(res.data.results);
+          this.store.tv = res.data.results;
         })
       }
     },
