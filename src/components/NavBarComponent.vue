@@ -4,15 +4,27 @@
             <img src="/img/netflixVector__3_.svg" alt="Logo Netflix">
         </div>
         <div>
-            <input type="text"placeholder="Cerca film...">
-            <button>Search</button>
+            <input type="text" v-model.trim="store.options.params.query" placeholder="Cerca film..." @keyup.enter="searchMedia">
+            <button @click="searchMedia">Search</button>
         </div>
     </nav>
+   
 </template>
 
 <script>
+import { store } from '../store';
   export default {
-    
+    name: 'NavBarComponent',
+    data () {
+        return {
+            store,
+        }
+    },
+    methods: {
+        searchMedia() {
+            this.$emit('searchApi')
+        }
+    }
 }
 </script>
 
