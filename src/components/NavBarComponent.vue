@@ -21,7 +21,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import CardComponent from './CardComponent.vue'; // Import the CardComponent
+import CardComponent from './CardComponent.vue'; 
 
 export default {
     name: 'NavBarComponent',
