@@ -9,7 +9,7 @@
         </div>
     </nav>
     <main>
-        <ul class="d-flex list-unstyled justify-content-center flex-wrap" v-if="moviesList.length > 0">
+        <ul class="d-flex list-unstyled justify-content-center flex-wrap " v-if="moviesList.length > 0">
             <li v-for="movie in moviesList" :key="movie.id">
                 <card-component :movie="movie" />
             </li>
