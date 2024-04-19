@@ -9,7 +9,9 @@
           <p>Lingua originale:</p>
           <img :src="flag" alt="">
         </div>
-        <p>{{ item.vote_average }}</p>
+        <div class="stars">
+          <i :class="{'fa-solid': n <= voteStar, 'fa-regular': n > voteStar}" class="fa-star" v-for="n in 5"></i>
+        </div>
       </figcaption>
     </figure>
   </div>
@@ -39,13 +41,15 @@ export default {
       }
     },
     imagePath() {
-  
     if (this.item.poster_path) {
       return this.store.imageUrl + this.item.poster_path;
     } else {
       return '/img/notfound.png';
     }
-  }
+  },
+  voteStar() {
+    return Math.ceil(this.item.vote_average / 2);
+  },
   }
 }
 </script>
@@ -57,9 +61,9 @@ h1, h3 {
 p {
   color: white
 }
-
-
-
+.stars {
+  color: gold;
+}
 .flag {
   height: 20px;
 
