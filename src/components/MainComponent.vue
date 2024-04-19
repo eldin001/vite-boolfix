@@ -1,7 +1,7 @@
 <template>
     <div>
-        <CardList />
-        <CardList />
+        <CardList title="Movies" :list="store.movies"/>
+        <CardList title="Series" :list="store.tv"/>
     </div>
 </template>
 
