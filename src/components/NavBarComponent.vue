@@ -35,9 +35,9 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 44%, rgba(69, 69, 69, 1) 100%);
+    background-color: white;
     padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
     img {
         width: 200px;
@@ -46,22 +46,18 @@ nav {
     input {
         padding: 5px 10px;
         border-radius: 10px 0 0 10px;
-        border: 2px solid white;
+        border: 2px solid lightgray;
     }
 
     button {
-        border-top: 2px solid white;
-        border-right: 2px solid white;
-        border-bottom: 2px solid white;
+        border-top: 2px solid lightgray;
+        border-right: 2px solid lightgray;
+        border-bottom: 2px solid lightgray;
         border-left: none;
         border-radius: 0 10px 10px 0;
         color: white;
         padding: 5px 10px;
-        background-color: black;
+        background-color: lightgray;
     }
-}
-
-main {
-    display: flex;
 }
 </style>

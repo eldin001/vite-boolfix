@@ -79,8 +79,6 @@ figure {
   overflow: hidden;
   cursor: pointer;
   height: 500px;
-  border: 1px solid lightgray;
-
 }
 
 img {
