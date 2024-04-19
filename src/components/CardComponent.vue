@@ -1,13 +1,13 @@
 <template>
   <div>
     <figure>
-      <img :src="store.imageUrl + item.poster_path" alt="Mountains">
+      <img :src="imagePath" alt="Mountains">
       <figcaption>
         <h1>{{ item.title || item.name }}</h1>
         <h3>{{ item.original_title || item.original_name}}</h3>
         <div class="d-flex gap-3  flag">
           <p>Lingua originale:</p>
-          <img :src="`/img/${item.original_language}.png`" alt="">
+          <img :src="flag" alt="">
         </div>
         <p>{{ item.vote_average }}</p>
       </figcaption>
@@ -17,7 +17,7 @@
 
 <script>
 import { store } from '../store';
-import axios from 'axios';
+
 
 export default {
   name: 'CardComponent',
@@ -27,17 +27,27 @@ export default {
   data() {
     return {
       store,
-      languageFlagUrl: null
+      flags: ['en', 'it', 'es', 'fr', 'ja', 'de', 'ko']
     }
   },
-  async created() {
-    try {
-      const languageFlagResponse = await axios.get(`https://api.example.com/flags?language=${this.item.original_language}`);
-      this.languageFlagUrl = languageFlagResponse.data.url;
-    } catch (error) {
-      console.error('Failed to fetch language flag:', error);
-      // Puoi gestire l'errore qui, ad esempio visualizzando un'immagine di default
+  computed: {
+    flag(){
+      if(this.flags.includes(this.item.original_language)){
+        return `/img/${this.item.original_language}.png`;
+      } else {
+        return `/img/unknown.png`
+      }
+    },
+    imagePath() {
+    // Verifica se item.poster_path è valido e non vuoto
+    if (this.item.poster_path) {
+      // Se è valido, restituisci il percorso completo dell'immagine
+      return this.store.imageUrl + this.item.poster_path;
+    } else {
+      // Se non è valido, restituisci il percorso di un'immagine di fallback
+      return '/img/notfound.png';
     }
+  }
   }
 }
 </script>
@@ -50,8 +60,14 @@ p {
   color: white
 }
 
+
+
 .flag {
   height: 20px;
+
+  img {
+    border-radius: 100%;
+  }
 }
 
 figure {
