@@ -39,12 +39,10 @@ export default {
       }
     },
     imagePath() {
-    // Verifica se item.poster_path è valido e non vuoto
+  
     if (this.item.poster_path) {
-      // Se è valido, restituisci il percorso completo dell'immagine
       return this.store.imageUrl + this.item.poster_path;
     } else {
-      // Se non è valido, restituisci il percorso di un'immagine di fallback
       return '/img/notfound.png';
     }
   }
