@@ -12,6 +12,7 @@
         <div class="stars">
           <i :class="{'fa-solid': n <= voteStar, 'fa-regular': n > voteStar}" class="fa-star" v-for="n in 5"></i>
         </div>
+        <p>{{ item.overview }}</p>
       </figcaption>
     </figure>
   </div>
@@ -78,6 +79,7 @@ figure {
   overflow: hidden;
   cursor: pointer;
   height: 500px;
+  border: 1px solid lightgray;
 
 }
 

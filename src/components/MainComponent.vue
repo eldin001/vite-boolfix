@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <main>
         <CardList title="Movies" :list="store.movies"/>
         <CardList title="Series" :list="store.tv"/>
-    </div>
+    </main>
 </template>
 
 <script>
@@ -22,5 +22,8 @@ import CardList from './CardList.vue'
 </script>
 
 <style lang="scss" scoped>
+main {
+    padding-top: 100px;
+}
 
 </style>
