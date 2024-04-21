@@ -120,6 +120,4 @@ figure:hover img {
    color: #ffffff;
   }
 }
-
-
 </style>
