@@ -62,6 +62,9 @@ export default {
   height: 200px;
   width: 100%;
   overflow: auto;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 h1, h3 {

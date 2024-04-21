@@ -2,7 +2,7 @@
     <main>
         <div v-if="store.searched">
             <div class="alert alert-danger" v-if="store.error.message">{{ store.error.message }}</div>
-            <div v-if="!store.loading">
+            <div class=" " v-if="!store.loading">
                 <CardList title="Movies:" :list="store.movies" />
                 <CardList title="Series:" :list="store.tv" />
             </div>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="right">
                     <video playsinline autoplay muted loop  id="bgvid">
-                        <source src="/img/JOHN WICK 3 - PARABELLUM (2019) - Trailer Italiano Ufficiale  HD.mp4" type="video/mp4">
+                        <source src="/img/Netflix Original Films (2018).mp4" type="video/mp4">
                     </video>
                 </div>
             </div>

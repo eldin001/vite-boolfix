@@ -45,8 +45,7 @@ export default {
     },
   },
   created() {
-    this.getMovies();
-    this.getTvSeries();
+    
 
   }
 }
