@@ -19,4 +19,5 @@ export const store = reactive({
         message: ''
     },
     loading: false,
+    searched: false,
 });

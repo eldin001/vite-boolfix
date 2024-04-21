@@ -22,6 +22,7 @@ import { store } from '../store';
     },
     methods: {
         searchMedia() {
+            this.store.searched = true;
             this.$emit('searchApi');
             
         }
@@ -39,6 +40,7 @@ nav {
     background-color: white;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 100px;
 
     img {
         width: 200px;

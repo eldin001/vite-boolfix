@@ -17,7 +17,7 @@
       </div>
       </figcaption>
     </figure>
-  </div>
+  </div>  
 </template>
 
 <script>
