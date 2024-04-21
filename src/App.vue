@@ -17,7 +17,7 @@ import MainComponent from './components/MainComponent.vue'
     },
     data() {
       return {
-        store
+        store,
       }
     },
     methods: {
@@ -46,11 +46,12 @@ import MainComponent from './components/MainComponent.vue'
         }).finally(() => {
           console.log('finally');
         })
-      }
+      },
     },
     created() {
       this.getMovies();
       this.getTvSeries();
+
     }
   }
 </script>

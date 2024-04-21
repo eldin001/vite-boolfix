@@ -4,7 +4,7 @@
             <img src="/img/netflixVector__3_.svg" alt="Logo Netflix">
         </div>
         <div>
-            <input type="text" v-model.trim="store.options.params.query" placeholder="Cerca film..." @keyup.enter="searchMedia">
+            <input type="text" v-model.trim="store.options.params.query" placeholder="Cerca film e serie..." @keyup.enter="searchMedia">
             <button @click="searchMedia">Search</button>
         </div>
     </nav>
@@ -22,7 +22,8 @@ import { store } from '../store';
     },
     methods: {
         searchMedia() {
-            this.$emit('searchApi')
+            this.$emit('searchApi');
+            
         }
     }
 }

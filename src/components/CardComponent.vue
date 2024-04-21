@@ -12,7 +12,9 @@
         <div class="stars">
           <i :class="{'fa-solid': n <= voteStar, 'fa-regular': n > voteStar}" class="fa-star" v-for="n in 5"></i>
         </div>
+        <div class="overview">
         <p>{{ item.overview }}</p>
+      </div>
       </figcaption>
     </figure>
   </div>
@@ -56,6 +58,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.overview {
+  height: 200px;
+  width: 100%;
+  overflow: auto;
+}
+
 h1, h3 {
   color: white;
 }
